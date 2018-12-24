@@ -1,0 +1,14 @@
+.Header {
+    width: 100%;
+    display: table;
+    background-color: aqua;
+    color: black;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.Header-Nav {
+    display: table-cell;
+    text-decoration: none;
+    border-right: 1px solid #000000;
+}
