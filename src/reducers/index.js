@@ -3,6 +3,9 @@ import * as types from '../actions/ActionTypes';
 const initialState = {
     header: {
         visible: true
+    },
+    history: {
+        pathname: '123'
     }
 };
 

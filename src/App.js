@@ -14,24 +14,16 @@ import Next from './containers/Next';
 
 class App extends Component {   
 
-    componentWillReceiveProps() {
-        this.props.setHeaderVisibility(true);
-
-        console.log(this.props);
-    }
-
     render() {
         return (
             <Router>
                 <div>
-                    {this.props.visible && <Header />}
-                    <div>
-                        <Switch>
-                            <Route path="/page" component={Page} />
-                            <Route path="/previous" component={Previous} />
-                            <Route path="/next" component={Next} />
-                        </Switch>
-                    </div>
+                    {this.props.header.visible && <Header />}
+                    <Switch>
+                        <Route path="/page" component={Page} />
+                        <Route path="/previous" component={Previous} />
+                        <Route path="/next" component={Next} />
+                    </Switch>
                 </div>
             </Router>
         );
@@ -40,7 +32,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
     return {
-        visible: state.header.visible
+        ...state
     };
 };
 

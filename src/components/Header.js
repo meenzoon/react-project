@@ -6,11 +6,18 @@ import './Header.css';
 const Header = () => {
     return (
         <div className="Header">
-            <Link to="/page" className="Header-Nav">
+            <Link to="/" className="Header-Nav">
                 홈
             </Link>
-            <Link to="/previous" className="Header-Nav">이전</Link>
-            <Link to="/next" className="Header-Nav">다음</Link>
+            <Link to="/page" className="Header-Nav">
+                페이지
+            </Link>
+            <Link to="/previous" className="Header-Nav">
+                이전
+            </Link>
+            <Link to="/next" className="Header-Nav">
+                다음
+            </Link>
         </div>
     );
 };

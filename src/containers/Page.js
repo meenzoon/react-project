@@ -4,17 +4,31 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import { Link } from 'react-router-dom';
-
 class Page extends Component {
+    constructor(props) {
+        super(props);
+
+        this.moveBackPage = this.moveBackPage.bind(this);
+    }
+
     componentDidMount() {
         this.props.setHeaderVisibility(false);
+    }
+
+    componentWillUnmount() {
+        this.props.setHeaderVisibility(true);
+    }
+
+    moveBackPage() {
+        this.props.history.goBack();
     }
 
     render() {
         return (
             <div>
                 존재하지 않는 페이지입니다.
-                <Link to="/next">뒤로 가기</Link>
+                <button onClick={this.moveBackPage}>뒤로 가기</button>
+                <Link to="/">홈</Link>
             </div>
         );
     }
