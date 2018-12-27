@@ -1,25 +1,12 @@
-import * as types from '../actions/ActionTypes';
+import { combineReducers } from 'redux';
 
-const initialState = {
-    header: {
-        visible: true
-    },
-    history: {
-        pathname: '123'
-    }
-};
+import header from './header/header';
+import history from './history/history';
 
-export default function reducer(state = initialState, action) {
-    switch (action.type) {
-        case types.SET_HEADER_VISIBILITY:
-            return {
-                ...state,
-                header: {
-                    ...state.header,
-                    visible: action.visible
-                }
-            };
-        default:
-            return state;
-    }
-}
+// 여러 개의 파일로 분리된 reducer 병합
+const reducers = combineReducers({
+    header,
+    history
+});
+
+export default reducers;
