@@ -11,7 +11,7 @@ const header = (state = initialState, action) => {
         case types.SET_HEADER_VISIBILITY:
             return {
                 ...state,
-                visible: action.value
+                visible: action.visible
             };
         default:
             return state;
