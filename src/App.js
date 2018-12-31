@@ -28,9 +28,9 @@ class App extends Component {
                 <Suspense fallback={<div>Loading...</div>}>
                     {this.props.header.visible && <Header />}
                     <Switch>
-                        <Route path="/page" component={Page} />
-                        <Route path="/previous" component={Previous} />
-                        <Route path="/next" component={Next} />
+                        <Route path="/page" component={() => Page} />
+                        <Route path="/previous" component={() => Previous} />
+                        <Route path="/next" component={() => Next} />
                     </Switch>
                 </Suspense>
             </Router>
