@@ -25,7 +25,6 @@ describe('Previous UI Component', () => {
         });
         
         it('shallow Previous Component Snapshot', () => {
-            //expect(true).toEqual(true);
             expect(component).toMatchSnapshot();
         });
     });
