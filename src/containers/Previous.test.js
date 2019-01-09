@@ -27,5 +27,6 @@ describe('Previous UI Component', () => {
         it('shallow Previous Component Snapshot', () => {
             expect(component).toMatchSnapshot();
         });
+        // comment
     });
 });
