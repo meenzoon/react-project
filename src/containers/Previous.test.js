@@ -11,7 +11,7 @@ describe('Previous UI Component', () => {
         it('renders correctly', () => {
             component = renderer.create(<Previous />);
         });
-    
+
         it('matches snapshot', () => {
             const tree = component.toJSON();
             expect(tree).toMatchSnapshot();
@@ -23,9 +23,10 @@ describe('Previous UI Component', () => {
         it('shallow Next Component', () => {
             component = shallow(<Previous />).html();
         });
-        
+
         it('shallow Previous Component Snapshot', () => {
             expect(component).toMatchSnapshot();
         });
+        // comment
     });
 });
